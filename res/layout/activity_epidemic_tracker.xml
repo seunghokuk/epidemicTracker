@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EpidemicTracker" >
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="Start recording "
+            android:textSize="9pt" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="104dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_margin="5dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="14dp"
+        android:text="Stop recording"
+        android:textSize="9pt" />
+
+    <Button
+        android:id="@+id/btnForceStop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btnDellLog"
+        android:layout_margin="5dp"
+        android:text="Force stop"
+        android:textSize="9pt" />
+
+    <Button
+        android:id="@+id/btnRestart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnForceStop"
+        android:layout_alignRight="@+id/btnDellLog"
+        android:layout_margin="5dp"
+        android:text="Restart"
+        android:textSize="9pt" />
+
+
+
+    <Button
+        android:id="@+id/btnDellLog"
+        android:layout_width="145dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/btnStop"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:text="Delete log files"
+        android:textSize="9pt" />
+ 	
+
+<!--  <EditText
+        android:id="@+id/textEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnRestart"
+        android:layout_alignLeft="@+id/btnRestart"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:ems="10"
+        android:hint="Rate (1,2,10,49.65,100,200 Hz)" >
+
+        <requestFocus />
+    </EditText> -->
+    <TextView
+        android:id="@+id/sensingWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/recordWarning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sensingWarning"
+        android:layout_below="@+id/sensingWarning"
+        android:ems="10" />
+
+</RelativeLayout>
